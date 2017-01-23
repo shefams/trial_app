@@ -1,4 +1,17 @@
-<h3>Home</h3>
-<p>Welcome to the home of <%= @owner.name %>.</p>
-<p>I was born on <%= @owner.birthdate %></p>
-<p>Only <%= @owner.countdown %> day(s) until my birthday!</p>
+<% content_for :sidebar do %>
+	<h3>Contact Info</h3>
+	<p>Email: me@example.com </p>
+<% end %>
+<div class="main">
+		<div id="login">
+			<h2>Login Form</h2>
+			<form id="form1" action="login.php" method="post">
+			<label>User Name :</label>
+			<input id="name" name="username" placeholder="username" type="text">
+			<label>Password :</label>
+			<input id="password" name="password" placeholder="password" type="password">
+			<input name="Submit" type="submit" value=" Login ">
+			<span><?php $error; ?></span>
+			</form>
+		</div>
+	</div>
